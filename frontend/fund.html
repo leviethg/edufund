@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>EduFund – Chi tiết quỹ</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    h1 { margin-bottom: 10px; }
+    .card { border:1px solid #ccc; padding:15px; margin-bottom:20px; border-radius:8px; }
+    input, textarea { margin:5px 0; padding:6px; width:250px; }
+    button { padding:8px 15px; margin-top:10px; cursor:pointer; }
+    table { width:100%; border-collapse: collapse; margin-top:15px; }
+    table, th, td { border:1px solid #999; }
+    th, td { padding:8px; text-align:left; }
+  </style>
+</head>
+
+<body>
+  <h1>EduFund – Chi tiết quỹ</h1>
+
+  <button id="connectBtn">Kết nối MetaMask</button>
+  <p id="status">Chưa kết nối</p>
+
+
+  <div id="fundInfo" class="card">
+    <h2>Thông tin quỹ</h2>
+    <p><b>Tên:</b> <span id="fundName"></span></p>
+    <p><b>Mô tả:</b> <span id="fundDesc"></span></p> <!-- THÊM DÒNG NÀY -->
+    <p><b>Giá trị:</b> <span id="fundValue"></span></p>
+    <p><b>Số suất:</b> <span id="fundSlots"></span></p>
+    <p><b>Chủ quỹ:</b> <span id="fundOwner"></span></p>
+  </div>
+
+
+  <div class="card">
+    <h2>Nộp hồ sơ ứng tuyển</h2>
+    <input id="name" placeholder="Tên"><br>
+    <input id="gpa" placeholder="GPA (vd 3.6)"><br>
+    <input id="link" placeholder="Link minh chứng"><br>
+    <button id="submitBtn">Nộp hồ sơ</button>
+  </div>
+
+  <div class="card">
+    <h2>Danh sách ứng viên</h2>
+    <button id="loadBtn">Tải danh sách</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Hạng</th>
+          <th>ID</th>
+          <th>Tên</th>
+          <th>GPA</th>
+          <th>Link</th>
+          <th>Votes</th>
+        </tr>
+      </thead>
+      <tbody id="tBody"></tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Vote cho ứng viên</h2>
+    <input id="voteIndex" placeholder="ID ứng viên">
+    <button id="voteBtn">Vote</button>
+  </div>
+
+  <div class="card">
+    <h2>Phát thưởng (chỉ chủ quỹ)</h2>
+    <button id="rewardBtn">Phát thưởng</button>
+    <button id="deleteFundBtn" style="background:red;color:white;padding:8px;margin-top:10px;display:none;">
+        Xóa quỹ
+    </button>
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="fund.js"></script>
+</body>
+</html>

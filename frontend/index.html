@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>EduFund – Trang chủ</title>
+</head>
+<body>
+
+  <h1>EduFund – Danh sách quỹ học bổng</h1>
+
+  <button id="connectBtn">Kết nối MetaMask</button>
+  <p id="status">Chưa kết nối</p>
+
+  <button onclick="window.location.href='factory.html'">
+    ➕ Tạo quỹ mới
+  </button>
+
+  <h2>Các quỹ hiện có</h2>
+  <button id="loadBtn">Tải danh sách quỹ</button>
+
+  <div id="fundList"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Create Scholarship Fund</title>
+</head>
+<body>
+  <h1>Tạo Quỹ Học Bổng</h1>
+
+  <button id="connectBtn">Kết nối MetaMask</button>
+  <p id="status">Chưa kết nối</p>
+
+  <hr />
+
+  <h2>Thông tin quỹ</h2>
+
+  <input id="fundName" placeholder="Tên quỹ" /><br /><br />
+  <input id="fundAmount" placeholder="Giá trị quỹ (ETH)" /><br /><br />
+  <input id="fundSlots" placeholder="Số suất (1..5)" /><br /><br />
+  <textarea id="fundDesc" placeholder="Mô tả (optional)" rows="3"></textarea><br /><br />
+
+  <button id="createBtn">Tạo quỹ</button>
+
+  <p id="result"></p>
+
+  <!-- Ether.js v5 -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="factory.js"></script>
+</body>
+</html>
